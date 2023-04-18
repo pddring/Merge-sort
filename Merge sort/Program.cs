@@ -13,9 +13,11 @@ namespace Merge_sort
             int MAX_VAL = 10000;
             int MIN_VAL = 0;
 
+            // use custom class which implements a recursive merge sort
             NumberCollection data = new NumberCollection();
-            Random r = new Random();
+
             // choose 32 random values
+            Random r = new Random();
             for (int i = 0; i < 32; i++)
             {
                 data.Add(r.Next(MIN_VAL, MAX_VAL));
