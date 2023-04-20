@@ -15,14 +15,16 @@ namespace Merge_sort
 
             // use custom class which implements a recursive merge sort
             NumberCollection data = new NumberCollection();
-
+            
             // choose 32 random values
             Random r = new Random();
-            for (int i = 0; i < 32; i++)
+
+            // count controlled iteration
+            for (int i = 0; i < 8; i++)
             {
+                // Add a random number to our number collection
                 data.Add(r.Next(MIN_VAL, MAX_VAL));
             }
-
 
             // Merge sort
             data.Sort();
@@ -30,6 +32,9 @@ namespace Merge_sort
 
             // display the values
             Console.WriteLine(data);
+
+            // pause before the program quits
+            Console.ReadLine();
         }
         
     }
